@@ -17,7 +17,6 @@ csv_quest_ongoing(){
     done < questbook_data.csv;
 }
 csv_quest_fail(){
-    i=0
      echo === Completed ===
     while IFS=";" read -r id name description quest_type completion_state quest_giver start_date end_date reward; do 
         state=$completion_state && if [[ $state -eq 1 ]]; then exit
